@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="/static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="\golink\home">Velpi</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Ruimtes <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+		  <li><a href="\gelijkvloers">Gelijkvloers</a></li>
+          <li><a href="\sk3">Yellow Room</a></li>
+          <li><a href="\sk2">White Room</a></li>
+          <li><a href="\sk1">Dino Room</a></li>
+		  <li><a href="\badkamer">Badkamer</a></li>
+		  <li><a href="\technischeruimte">Technische Ruimte</a></li>
+		  <li><a href="\kelder">Kelder</a></li>
+
+        </ul>
+      </li>
+	  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Utils <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="\goto\zonnepanelen">Zonnepanelen</a></li>
+          <li><a href="\goto\instellingen">Instellingen</a></li>
+          <li><a href="\goto\trend">Trend</a></li>
+        </ul>
+      </li> 
+    </ul>
+    <h3 class="pull-right" ><font color="#cccccc">Instellingen</font></h3>
+  </div>
+</nav>
+
+<div class="container">
+<td>
+{% if printmessage == True %}
+	<a href="\toggle_parameter\printmessage" class="btn btn-success btn-block" role="button">Printmessage staat aan</a>
+{% else %}
+	<a href="\toggle_parameter\printmessage" class="btn btn-danger btn-block" role="button">Printmessage staat uit</a>
+{% endif %} </td>
+<br>
+<td>
+{% if logmessage == True %}
+	<a href="\toggle_parameter\logmessage" class="btn btn-success btn-block" role="button">Logmessage staat aan</a>
+{% else %}
+	<a href="\toggle_parameter\logmessage" class="btn btn-danger btn-block" role="button">Logmessage staat uit</a>
+{% endif %} </td>
+<br>
+<td>
+{% if maildeurbel == True %}
+	<a href="\toggle_parameter\maildeurbel" class="btn btn-success btn-block" role="button">Mail bij deurbel staat aan</a>
+{% else %}
+	<a href="\toggle_parameter\maildeurbel" class="btn btn-danger btn-block" role="button">Mail bij deurbel staat uit</a>
+{% endif %} </td>
+<br>
+<td>
+{% if templogging == True %}
+	<a href="\toggle_parameter\templogging" class="btn btn-success btn-block" role="button">Temperatuurlogging staat aan</a>
+{% else %}
+	<a href="\toggle_parameter\templogging" class="btn btn-danger btn-block" role="button">Temperatuurlogging staat uit</a>
+{% endif %} </td>
+<br>
+<br>
+<br>
+<a href="\reboot" class="btn btn-primary btn-block" role="button">Reboot Isengard</a><br>
+<a href="\uitzetten" class="btn btn-primary btn-block" role="button">Shutdown Isengard</a><br>
+</body>
+</html>
